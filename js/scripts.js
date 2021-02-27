@@ -13,17 +13,25 @@ Pizza.prototype.addTopping = function(topping) {
 }
 
 Pizza.prototype.pizzaPrice = function() {
-  let price = 0;
+  let total = 0;
   if (this.size === "small") {
-    price += 12;
+    total += 12;
   } else if (this.size === "medium") {
-    price += 15;
+    total += 15;
   } else if (this.size === "large") {
     price += 18;
   };
-  return price;
+  const pizzaToppingsKeys = Object.keys(pizza.toppings);
+
+  pizzaToppingsKeys.forEach(function(key) {
+    total += pizza.toppings[key].price
+  });
+
+  return total;
 }
 
 let pizza = new Pizza("medium")
 let topping1 = new Topping("pepperoni",1)
 let topping2 = new Topping("bell pepper", .5)
+pizza.addTopping(topping1);
+pizza.addTopping(topping2);

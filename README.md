@@ -28,7 +28,16 @@ Expect(pizza.addTopping(topping1)toEqual(Pizza {size: "medium", toppings: {peppe
 
 Describe Pizza.prototype.pizzaPrice()  
 Test: "It should calculate the price of the pizza based on the size"  
+Code: let pizza = Pizza("medium")  
 Expect(pizza.pizzaPrice().toEqual(15))  
+
+Test: "It should calculate the price of the pizza based on its size and any toppings added"  
+Code: let pizza = Pizza("medium")  
+      let topping1 = Topping("pepperoni",1)  
+      let topping2 = Topping("bell pepper",.5)  
+      pizza.addTopping(topping1)  
+      pizza.addTopping(topping2)
+Expect(pizza.pizzaPrice().toEqual(16.5))
 
 ## Description
 
