@@ -26,6 +26,10 @@ Describe Pizza.prototype.addTopping(topping)
 Test: "It should add a topping object to the toppings property of a pizza object"  
 Expect(pizza.addTopping(topping1)toEqual(Pizza {size: "medium", toppings: {pepperoni}}))
 
+Describe Pizza.prototype.pizzaPrice()  
+Test: "It should calculate the price of the pizza based on the size"  
+Expect(pizza.pizzaPrice().toEqual(15))  
+
 ## Description
 
 _{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
