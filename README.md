@@ -14,9 +14,17 @@
 
 ## Tests
 
-Describe Topping(name,price)
-Test: "It should create a Topping object with a name and price"
-Expect(Topping("pepperoni",1)toEqual(Topping {name:"pepperoni",price:1}))
+Describe Pizza(size)  
+Test: "It should create a Pizza object with size and empty toppings properties."  
+Expect(Pizza("medium").toEqual(Pizza {size: "medium", toppings: {...}}))
+
+Describe Topping(name,price)  
+Test: "It should create a Topping object with a name and price"  
+Expect(Topping("pepperoni",1).toEqual(Topping {name:"pepperoni",price:1}))  
+
+Describe Pizza.prototype.addTopping(topping)  
+Test: "It should add a topping object to the toppings property of a pizza object"  
+Expect(pizza.addTopping(topping1)toEqual(Pizza {size: "medium", toppings: {pepperoni}}))
 
 ## Description
 
