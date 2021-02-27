@@ -30,8 +30,3 @@ Pizza.prototype.pizzaPrice = function() {
   return total;
 }
 
-let pizza = new Pizza("medium")
-let topping1 = new Topping("pepperoni",1)
-let topping2 = new Topping("bell pepper", .5)
-pizza.addTopping(topping1);
-pizza.addTopping(topping2);

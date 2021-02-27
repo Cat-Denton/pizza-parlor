@@ -24,6 +24,7 @@ Expect(Topping("pepperoni",1).toEqual(Topping {name:"pepperoni",price:1}))
 
 Describe Pizza.prototype.addTopping(topping)  
 Test: "It should add a topping object to the toppings property of a pizza object"  
+Code: topping1 = new Topping("pepperoni",1)
 Expect(pizza.addTopping(topping1)toEqual(Pizza {size: "medium", toppings: {pepperoni}}))
 
 Describe Pizza.prototype.pizzaPrice()  
