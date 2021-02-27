@@ -24,11 +24,10 @@ Pizza.prototype.pizzaPrice = function() {
   const pizzaToppingsKeys = Object.keys(this.toppings);
 
   pizzaToppingsKeys.forEach(function(key) {
-    total += this.toppings.key.price
+    total += this.toppings[key].price
   });
-
   return total;
-}
+};
 
 $(document).ready(function() {
   $("form#pizzaBuilder").submit(function(event) {
