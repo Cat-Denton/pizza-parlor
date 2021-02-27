@@ -21,11 +21,15 @@ Pizza.prototype.pizzaPrice = function() {
   } else if (this.size === "large") {
     total += 18;
   };
-  const pizzaToppingsKeys = Object.keys(this.toppings);
 
-  pizzaToppingsKeys.forEach(function(key) {
-    total += this.toppings[key].price
+  Object.keys(this.toppings).forEach(key => {
+    total += this.toppings[key].price;
   });
+
+//  Object.keys(this.toppings).forEach(function(key) {
+//     total += this.toppings[key].price
+//   }); 
+
   return total;
 };
 
