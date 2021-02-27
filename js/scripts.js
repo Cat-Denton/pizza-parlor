@@ -19,26 +19,30 @@ Pizza.prototype.pizzaPrice = function() {
   } else if (this.size === "medium") {
     total += 15;
   } else if (this.size === "large") {
-    price += 18;
+    total += 18;
   };
-  const pizzaToppingsKeys = Object.keys(pizza.toppings);
+  const pizzaToppingsKeys = Object.keys(this.toppings);
+
   pizzaToppingsKeys.forEach(function(key) {
-    total += pizza.toppings[key].price
+    total += this.toppings.key.price
   });
+
   return total;
-};
+}
 
 $(document).ready(function() {
   $("form#pizzaBuilder").submit(function(event) {
-    
+    event.preventDefault();
     let pizza = new Pizza($("#size").val())
     $("input:checkbox[name=pizza-topping]:checked").each(function(){
       let toppingString = $(this).val().toString();
       const toppingArray = toppingString.split(",");
-      let newTopping = new Topping(toppingArray[0],toppingArray[1]);
+      let newTopping = new Topping(toppingArray[0],parseFloat(toppingArray[1]));
+      console.log(newTopping)
       pizza.addTopping(newTopping);      
     });
     console.log(pizza)
-    event.preventDefault();
+    console.log(pizza.pizzaPrice())
+    
   });
 });
