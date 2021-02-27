@@ -1,6 +1,6 @@
 # _Pizza Parlor_
 
-#### _Takes a pizza order for a hypothetical customer_
+#### _Takes a pizza order for a hypothetical customer. Website created for practice with Javascript objects and prototypes._
 
 #### By _**Cat Denton**_
 
@@ -16,7 +16,7 @@
 
 Describe Pizza(size)  
 Test: "It should create a Pizza object with size and empty toppings properties."  
-Expect(Pizza("medium").toEqual(Pizza {size: "medium", toppings: {...}}))
+Expect(Pizza("medium").toEqual(Pizza {size: "medium", toppings: {...}}))  
 
 Describe Topping(name,price)  
 Test: "It should create a Topping object with a name and price"  
@@ -24,8 +24,8 @@ Expect(Topping("pepperoni",1).toEqual(Topping {name:"pepperoni",price:1}))
 
 Describe Pizza.prototype.addTopping(topping)  
 Test: "It should add a topping object to the toppings property of a pizza object"  
-Code: topping1 = new Topping("pepperoni",1)
-Expect(pizza.addTopping(topping1)toEqual(Pizza {size: "medium", toppings: {pepperoni}}))
+Code: topping1 = new Topping("pepperoni",1)  
+Expect(pizza.addTopping(topping1)toEqual(Pizza {size: "medium", toppings: {pepperoni}}))  
 
 Describe Pizza.prototype.pizzaPrice()  
 Test: "It should calculate the price of the pizza based on the size"  
@@ -37,27 +37,23 @@ Code: let pizza = Pizza("medium")
       let topping1 = Topping("pepperoni",1)  
       let topping2 = Topping("bell pepper",.5)  
       pizza.addTopping(topping1)  
-      pizza.addTopping(topping2)
-Expect(pizza.pizzaPrice().toEqual(16.5))
+      pizza.addTopping(topping2)  
+Expect(pizza.pizzaPrice().toEqual(16.5))  
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This website receives a pizza order from a user who selects the size from a drop-down menu and toppings from a multi-choice checklist. It then turns those choices into a Pizza object, and uses that object to calculate a total price for the pizza._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _Clone github repository to your local machine_
+* _Open code with VS Code or another editor_
+* _Open index.html to use website_
+* _(https://cat-denton.github.io/pizza-parlor)[gh-pages deployment]_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _None_
 
 ## License
 

@@ -25,11 +25,9 @@ Pizza.prototype.pizzaPrice = function() {
   Object.keys(this.toppings).forEach(key => {
     total += this.toppings[key].price;
   });
-
 //  Object.keys(this.toppings).forEach(function(key) {
 //     total += this.toppings[key].price
 //   }); 
-
   return total;
 };
 
@@ -41,11 +39,10 @@ $(document).ready(function() {
       let toppingString = $(this).val().toString();
       const toppingArray = toppingString.split(",");
       let newTopping = new Topping(toppingArray[0],parseFloat(toppingArray[1]));
-      console.log(newTopping)
       pizza.addTopping(newTopping);      
     });
-    console.log(pizza)
-    console.log(pizza.pizzaPrice())
-    
+    const price = pizza.pizzaPrice().toFixed(2);
+    $("#pizza-price").text(price);
+    $("#order-total").show();
   });
 });
