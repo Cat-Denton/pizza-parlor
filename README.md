@@ -12,6 +12,12 @@
 * _Jquery_
 * _Bootstrap_
 
+## Tests
+
+Describe Topping(name,price)
+Test: "It should create a Topping object with a name and price"
+Expect(Topping("pepperoni",1)toEqual(Topping {name:"pepperoni",price:1}))
+
 ## Description
 
 _{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
